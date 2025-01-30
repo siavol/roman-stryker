@@ -6,6 +6,7 @@ describe('numberToRoman', () => {
     { input: 1, expected: 'I' },
     { input: 2, expected: 'II' },
     { input: 3, expected: 'III' },
+    { input: 4, expected: 'IV' },
     { input: 5, expected: 'V' },
     { input: 8, expected: 'VIII' },
     { input: 9, expected: 'IX' },
@@ -23,6 +24,7 @@ describe('numberToRoman', () => {
   [ 
     { input: 1000, expected: 'M' },
     { input: 1001, expected: 'MI' },
+    { input: 1640, expected: 'MDCXL' },
     { input: 1990, expected: 'MCMXC' },
     { input: 2007, expected: 'MMVII' },
     { input: 2008, expected: 'MMVIII' },
