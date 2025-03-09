@@ -28,11 +28,12 @@ const romanDigits = [
 ];
 
 function getHighestRoman(number: number) {
-  for (let i = romanDigits.length - 1; i > 0; i--) {
+  for (let i = romanDigits.length - 1; i >= 0; i--) {
     if (romanDigits[i].decimal <= number) {
       return romanDigits[i];
     }
   }
 
-  return romanDigits[0];
+  // Stryker disable next-line StringLiteral
+  throw new Error('Should never happen');
 }
