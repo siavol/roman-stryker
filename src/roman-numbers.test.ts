@@ -14,13 +14,6 @@ describe('numberToRoman', () => {
     { input: 19, expected: 'XIX' },
     { input: 22, expected: 'XXII' },
     { input: 15, expected: 'XV' },
-  ].forEach(({ input, expected }) => {
-    test(`should handle small numbers ${input}`, () => {
-      expect(numberToRoman(input)).toBe(expected);
-    });
-  });
-
-  [ 
     { input: 1000, expected: 'M' },
     { input: 1001, expected: 'MI' },
     { input: 1990, expected: 'MCMXC' },
@@ -28,7 +21,7 @@ describe('numberToRoman', () => {
     { input: 2008, expected: 'MMVIII' },
     { input: 2456, expected: 'MMCDLVI' },
   ].forEach(({ input, expected }) => {
-    test(`should handle large numbers ${input}`, () => {
+    test(`should convert ${input} to ${expected}`, () => {
       expect(numberToRoman(input)).toBe(expected);
     });
   });
